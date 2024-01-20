@@ -1,0 +1,9 @@
+.carritoImg{
+    width: 100px;
+    height: 100px;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
