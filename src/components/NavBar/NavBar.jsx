@@ -9,6 +9,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -17,7 +18,7 @@ function NavBar() {
       {['sm'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary m-0" data-bs-theme="dark">
           <Container fluid>
-            <Navbar.Brand href="#"><img src="./Logo/BananaPixel.png" alt="logo de banana pixel" className='logoBanana'/></Navbar.Brand>
+            <NavLink to={'/'}><img src="/assets/img/Logo/BananaPixel.png" alt="logo de banana pixel" className='logoBanana mx-3'/></NavLink>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -32,15 +33,10 @@ function NavBar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-start align-items-center flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Quienes Somos</Nav.Link>
-                  <Nav.Link href="#action2">Promociones</Nav.Link>
-                  <NavDropdown
-                    title="Productos"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action3">Frutas</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Verduras</NavDropdown.Item>
-                  </NavDropdown>
+                  <NavLink to={'/presentacion'} className='estilo px-3'>Quienes Somos</NavLink>
+                  <NavLink to={'/promos'} className='estilo px-3'>Promociones</NavLink>
+                  <NavLink to={'categoria/Frutas'} className='estilo px-3'>Frutas</NavLink>
+                  <NavLink to={'categoria/Verduras'} className='estilo px-3'>Verduras</NavLink>
                 </Nav>
                 <Form className="d-flex align-items-center">
                   <Form.Control

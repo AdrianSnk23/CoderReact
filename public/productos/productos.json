@@ -1,0 +1,245 @@
+[
+    {
+        "id": 1,
+        "nombre": "Acelga",
+        "precio": 1200,
+        "stock": 5,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/acelga.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 2,
+        "nombre": "Ajo",
+        "precio": 800,
+        "stock": 10,
+        "descripcion": "Precio por cabeza",
+        "url": "/assets/img/verduras/ajo.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 3,
+        "nombre": "Batata",
+        "precio": 1100,
+        "stock": 6,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/batata.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 4,
+        "nombre": "Berenjena",
+        "precio": 750,
+        "stock": 15,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/berenjena.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 5,
+        "nombre": "Brocoli",
+        "precio": 700,
+        "stock": 3,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/brocoli.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 6,
+        "nombre": "Cebolla de Verdeo",
+        "precio": 1500,
+        "stock": 3,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/cebolla-verdeo.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 7,
+        "nombre": "Cebolla",
+        "precio": 1250,
+        "stock": 15,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/cebolla.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 8,
+        "nombre": "Choclo",
+        "precio": 200,
+        "stock": 7,
+        "descripcion": "Precio por kg aproximado",
+        "url": "public/assets/img/verduras/choclo.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 9,
+        "nombre": "Coliflor",
+        "precio": 1350,
+        "stock": 9,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/coliflor.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 10,
+        "nombre": "Lechuga",
+        "precio": 1500,
+        "stock": 6,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/verduras/lechuga.jpg",
+        "categoria": "Verduras"
+    },
+    {
+        "id": 11,
+        "nombre": "Banana",
+        "precio": 1900,
+        "stock": 8,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/banana.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 12,
+        "nombre": "Ciruela",
+        "precio": 3200,
+        "stock": 15,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/ciruela.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 13,
+        "nombre": "Durazno",
+        "precio": 2100,
+        "stock": 12,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/durazno.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 14,
+        "nombre": "Frutilla",
+        "precio": 7800,
+        "stock": 10,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/frutilla.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 15,
+        "nombre": "Granada",
+        "precio": 3000,
+        "stock": 2,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/granada.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 16,
+        "nombre": "Kiwi",
+        "precio": 6100,
+        "stock": 14,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/kiwi.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 17,
+        "nombre": "Mandarina",
+        "precio": 2200,
+        "stock": 16,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/mandarina.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 18,
+        "nombre": "Mango",
+        "precio": 7300,
+        "stock": 9,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/mango.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 19,
+        "nombre": "Manzana Roja",
+        "precio": 1700,
+        "stock": 17,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/manzana-roja.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 20,
+        "nombre": "Manzana Verde",
+        "precio": 1700,
+        "stock": 14,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/manzana-verde.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 21,
+        "nombre": "Melón",
+        "precio": 3250,
+        "stock": 8,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/melon.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 22,
+        "nombre": "Naranja",
+        "precio": 1800,
+        "stock": 3,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/naranja.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 23,
+        "nombre": "Níspero",
+        "precio": 900,
+        "stock": 8,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/nispero.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 24,
+        "nombre": "Pera",
+        "precio": 2600,
+        "stock": 15,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/pera.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 25,
+        "nombre": "Pomelo",
+        "precio": 3600,
+        "stock": 10,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/pomelo.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 26,
+        "nombre": "Sandía",
+        "precio": 5000,
+        "stock": 10,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/sandia.jpg",
+        "categoria": "Frutas"
+    },
+    {
+        "id": 27,
+        "nombre": "Uvas",
+        "precio": 4200,
+        "stock": 15,
+        "descripcion": "Precio por kg aproximado",
+        "url": "/assets/img/frutas/uvas.jpg",
+        "categoria": "Frutas"
+    }
+]
