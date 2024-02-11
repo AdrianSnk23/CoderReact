@@ -1,20 +1,20 @@
 import React from 'react'
 import Item from '../Item/Item'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import './ItemList.css'
 
 const ItemList = ({productos}) => {
   return (
-    <Container>
-    <Row>
-      <Col>{productos.map((producto) =>{
+      
+      <div className='contenedor'>
+        {productos.map((producto) =>{
             return(
+              <div className='pruebaGrid'>
                 <Item producto={producto}/>
+              </div>
             )
-        })}</Col>
-    </Row>
-  </Container>
+        })}
+      </div>
+    
   )
 }
 

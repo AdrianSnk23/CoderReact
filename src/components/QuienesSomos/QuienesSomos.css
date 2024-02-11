@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+}
+.presentacion{
+  text-align: center;
+  font-size: 75px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-color: grey;
+}
+.introduccion{
+  text-shadow: 2px 1px yellow;
+  font-size: 55px;
+  color: grey;
+  background-color: rgb(63, 134, 63);
+}
