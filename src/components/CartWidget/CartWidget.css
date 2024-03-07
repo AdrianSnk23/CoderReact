@@ -1,9 +1,10 @@
 .carritoImg{
-    width: 100px;
-    height: 100px;
+    width: 45px;
+    height: 45px;
 }
 .centrar{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px
 }

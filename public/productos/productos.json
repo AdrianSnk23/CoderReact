@@ -304,5 +304,23 @@
         "descripcion": "Precio por kg aproximado",
         "url": "/assets/img/frutas/uvas.jpg",
         "categoria": "Frutas"
-    }
+    },
+    {
+        "id": "1A",
+        "nombre": "Mix Frutas",
+        "precio": "18000",
+        "stock": "20",
+        "descripcion": "Mix de frutas conformadas por: 1 Kg Naranja, 1 Kg Manzana, 1/2 Kg Banana, 1/2 Kg Pera, 1/2 Kg Uvas, 1 Kg Ciruela.",
+        "url": "/assets/img/Promo/PromoFrutas.png",
+        "categoria": "promos"
+     },
+     {
+         "id": "1B",
+        "nombre": "Mix Verduras",
+        "precio": "15000",
+        "stock": "20",
+        "descripcion": "Mix de Verduras conformadas por: 1 Kg Papa, 1 Kg Cebolla, 1 Kg Acelga, 1 Kg Cebolla, 1 Kg Tomate, 1 Kg Zanahoria.",
+        "url": "/assets/img/Promo/PromoVerduras.png",
+        "categoria": "promos"
+     }
 ]

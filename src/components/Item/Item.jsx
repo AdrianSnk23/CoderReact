@@ -7,12 +7,12 @@ const Item = ({producto}) => {
     <Link to={`/detalle/${producto.id}`}>
       <div className="column m-1">
         <Card style={{ width: '25rem' }} className='bg-success'>
-      <Card.Img variant="top" src={producto.url} />
-      <Card.Body>
-        <Card.Title className='text-light'>{producto.nombre}</Card.Title>
-      </Card.Body>
-    </Card>
-  </div>
+          <Card.Img variant="top" src={producto.url} />
+          <Card.Body>
+            <Card.Title className='text-light'>{producto.nombre}</Card.Title>
+          </Card.Body>
+      </Card>
+      </div>
     </Link>
     )
 }

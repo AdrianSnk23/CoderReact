@@ -1,40 +1,37 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemList from '../ItemList/ItemList';
-import { useParams } from 'react-router-dom';
+import Promos from '../Promos/Promos';
+import { useNavigate, useParams } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
+import "./ItemListContainer.css"
+import useFetchProductos from '../../hooks/useFetchProducts';
 
-const ItemListContainer = ({}) => {
 
-  const [productos,setProductos] = useState([])
-
+const ItemListContainer = () => {
   const {categoria} = useParams()
-
-  useEffect(()=>{
-    const fetchData = async () => {
-      try{
-        const response = await fetch("/productos/productos.json")
-        const data = await response.json()
-
-        if(categoria){
-          const filteredProducts = data.filter((p) => p.categoria == categoria)
-          setProductos(filteredProducts)
-        }else{
-          setProductos(data)
-        }
-      }
-      catch(error){
-        console.log("error en el fetch"+error)
-      }
+  const {productos} = useFetchProductos(categoria)
+  const navigate = useNavigate()
+  const scrollToPromo = () => {
+    if (categoria) {
+      navigate('/promos')
+    }else{
+    document.getElementById("promocion").scrollIntoView()
     }
-  fetchData()
-  },[categoria])
-
+  }
 
   return (
     <>
-    <div className='text-bg-dark text-center p-0 margin'>
-      {productos.length == 0 ? <h1>CARGANDO...</h1> : <ItemList productos={productos}/>}
-    </div>
+      <div>
+        <div onClick={scrollToPromo} className='bannerPromo'>
+          <p className='bannerP'>OFERTAS IMPERDIBLES AQUI</p>
+          <img src='../assets/img/Logo/bolsa-llena-verduras.jpg' alt="bolsa de verduras" className='promo'/>
+        </div>
+      </div>
+
+      <div className='text-bg-dark text-center p-0 margin'>
+        {productos.length === 0 ? <h1>CARGANDO...</h1> : <ItemList productos={productos}/>}
+      </div>
     </>
   )
 }

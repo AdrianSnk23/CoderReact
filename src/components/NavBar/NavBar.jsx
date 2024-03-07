@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import "./NavBar.css"
 import Button from 'react-bootstrap/Button';
@@ -8,8 +8,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 
 function NavBar() {
+
+  // const {scrollPromocion} = useContext(CartContext)
+  const scrollToPromo = () => {
+    document.getElementById("promo").scrollIntoView()
+  }
+
   return (
     <>
     <div>
@@ -36,15 +43,6 @@ function NavBar() {
                   <NavLink to={'categoria/Frutas'} className='estilo px-3'>Frutas</NavLink>
                   <NavLink to={'categoria/Verduras'} className='estilo px-3'>Verduras</NavLink>
                 </Nav>
-                <Form className="d-flex align-items-center">
-                  <Form.Control
-                    type="search"
-                    placeholder="Buscar"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success" className='me-5 me-sm-0'>Buscar</Button>
-                </Form>
                 <CartWidget/>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
