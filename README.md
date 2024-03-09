@@ -1,7 +1,8 @@
 # Bienvenido a mi primer proyecto de React.
-
+Bienvenidos a mi proyecto, mi nombre es Adrian Rodriguez.
 Este proyecto está compilado en [ViteJs](https://es.vitejs.dev/) para el curso de **React** hecho en **Coderhouse**
-Las tecnologias utilizadas para este
+Las tecnologías utilizadas para este proyecto son **Bootstrap**, **ReactBootstrap** y **Firebase**
+El proyecto s
 
 ## Como inicializar el proyecto.
 Para inicializar el proyecto debes entrar en la terminal de **VSCode** y dirigirte a la ruta del proyecto.
@@ -17,5 +18,5 @@ Para que el proyecto funcione deberás crear un archivo **.env** dentro de la ca
 > **Nota: ** verificar que esté a la altura de los archivos como App.jsx o .gitignore
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNjQ5NzIxMF19
+eyJoaXN0b3J5IjpbMzIyNTg1MTg4XX0=
 -->
