@@ -7,29 +7,16 @@ import QuienesSomos from './components/QuienesSomos/QuienesSomos';
 import Promos from './components/Promos/Promos';
 import Cart from './components/Cart/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Checkout from './components/Checkout/Checkout';
 import CartProvider from './context/cartContext';
 import Error from './components/Error/Error';
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-//import {getFirestore, doc, getDoc} from 'firebase/firestore'
+
+
 
 function App() {
-  
-  //acceder a un documento
-
-  // const [product, setProduct] = useEffect()
-
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const productRef = doc(db, "producto", "YWWfL2GHzdoGeDfUEEcl")
-  //   getDoc(productRef).then((snapshot) =>{
-  //     if(snapshot.exists){
-  //       setProduct({id: snapshot.id, ...snapshot.data()})
-  //     }
-  //   })
-  // },[])
 
   return (
     <>
@@ -43,6 +30,7 @@ function App() {
             <Route path='/presentacion' element={<QuienesSomos/>}></Route>
             <Route path='/cart' element={<Cart/>}></Route>
             <Route path='/promos' element={<Promos/>}></Route>
+            <Route path='/checkout' element={<Checkout/>}></Route>
             <Route path='*' element={<Error/>}></Route>
         </Routes>
         </CartProvider>
@@ -52,6 +40,5 @@ function App() {
   )
 }
 
-// import { formatPostcssSourceMap } from 'vite';
 
 export default App

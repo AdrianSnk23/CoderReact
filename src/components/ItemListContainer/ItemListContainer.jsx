@@ -1,11 +1,11 @@
 import React,{useState,useEffect, useContext} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemList from '../ItemList/ItemList';
-import Promos from '../Promos/Promos';
 import { useNavigate, useParams } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext';
-import "./ItemListContainer.css"
 import useFetchProductos from '../../hooks/useFetchProducts';
+import "./ItemListContainer.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const ItemListContainer = () => {

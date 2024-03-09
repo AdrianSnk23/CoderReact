@@ -1,29 +1,29 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
+import { getFirestore,getDoc, doc } from 'firebase/firestore';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { db } from '../../firebase/config';
 
-const ItemDetailContainer = ({}) => {
-    const [productos, setProductos] = useState ([])
+const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState ({})
 
     const {id} = useParams()
-
+      
     useEffect (() => {
-        const fetchData = async () =>{
-            try{
-                const response = await fetch("/productos/productos.json")
-                const data = await response.json()
-                const productos = data.find((p)=>p.id == id)
-                setProductos(productos)
-            }
-            catch(error){
-                console.log("error en el fetch" + error)
-            }
-        }
-        fetchData()
-    },[id])
+        const nuevoDoc = doc(db, "producto", id)
+
+        getDoc(nuevoDoc).then(res => {
+            const data = res.data()
+            const nuevoProducto = {id: res.id,...data}
+            setProducto(nuevoProducto)
+        })
+        .catch(error => console.log(error))
+    },[])
+    
   return (
-    <div>
-        <ItemDetail productos={productos}/>
+    <div className='d-flex justify-content-center bg-dark'>
+        <ItemDetail producto={producto}/>
     </div>
   )
 }

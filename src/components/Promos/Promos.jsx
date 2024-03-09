@@ -18,9 +18,9 @@ const Promos = () => {
         <h1>CARGANDO...</h1>
         :
         <div className='d-flex justify-content-around'>
-          {productos.map((promo, index) => ( // Asegúrate de pasar el parámetro 'promo' y 'index'
-            <div className='carta' key={index}>
+          {productos.map((promo, index) => ( 
 
+            <div className='carta' key={index}>
               <Link to={`/detalle/${promo.id}`}>
                     <div className="column m-3 ">
                       <Card style={{ width: '35rem' }} className='bg-warning'>
@@ -28,13 +28,12 @@ const Promos = () => {
                         <Card.Body>
                           <Card.Title className='text-dark'>{promo.nombre}</Card.Title>
                         </Card.Body>
-                    </Card>
+                      </Card>
                     </div>
               </Link>
-
-              
             </div>
-          ))}
+            ))
+          }
         </div>
       }
     </div>

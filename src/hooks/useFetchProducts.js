@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 const useFetchProductos = (categoria) => {
   const [productos, setProductos] = useState([]);
@@ -8,17 +10,25 @@ const useFetchProductos = (categoria) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      try {
-        const response = await fetch("/productos/productos.json");
-        const data = await response.json();
+      
+      const productosCollection = collection(db, 'producto');
+      let q;
 
-        if (categoria) {
-            const filteredProducts = data.filter((p) => p.categoria === categoria);
-            setProductos(filteredProducts);
-        } else {
-          const nonPromoProducts = data.filter((p) => p.categoria !== 'promos');
-          setProductos(nonPromoProducts);
-        }
+      if (categoria) {
+        q = query(productosCollection, where('categoria', '==', categoria));
+      } else {
+        q = query(productosCollection, where('categoria', '!=', 'promos'));
+      }
+
+      try {
+        const querySnapshot = await getDocs(q);
+        const fetchedProducts = [];
+
+        querySnapshot.forEach((doc) => {
+          fetchedProducts.push({ id: doc.id, ...doc.data() });
+        });
+
+        setProductos(fetchedProducts);
       } catch (error) {
         console.error("Error fetching data: ", error);
         setError("Error en el fetch: " + error);

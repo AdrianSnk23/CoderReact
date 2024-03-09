@@ -13,9 +13,11 @@ const CartProvider = ({children}) => {
     const agregarCarrito = (producto, cantidad) => {
 
         const duplicado = cart.findIndex(prod => prod.producto.id === producto.id) 
+
         if(duplicado === -1){
             setCart([...cart,{producto,cantidad}])
-        }else{
+        }
+        else{
             const newCart = [...cart]
             newCart[duplicado].cantidad += cantidad
             setCart(newCart)

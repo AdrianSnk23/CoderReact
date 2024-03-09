@@ -1,14 +1,20 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 const CartItem = ({producto, eliminarItem}) => {
   return (
-    <div key={producto.producto.id}>
-        
-        <img src={producto.producto.url} alt={producto.producto.nombre} />
-        <h2>{producto.producto.nombre}</h2>
-        <p>Cantidad: {producto.cantidad}</p>
-        <p>Precio por cantidad: ${producto.producto.precio}</p>
-        <button onClick={() => eliminarItem(producto.producto.id)}>Eliminar Producto</button>
+    <div key={producto.producto.id} className='m-2 d-flex justify-content-center'>
+      <Card className='bg-warning' style={{ width: '25rem' }}>
+        <Card.Img variant="top" src={producto.producto.url} alt={producto.producto.nombre} />
+        <Card.Body>
+          <Card.Title>{producto.producto.nombre}</Card.Title>
+          <Card.Text>Cantidad: {producto.cantidad}</Card.Text>
+          <Card.Text>Precio por cantidad: ${producto.producto.precio}</Card.Text>
+          <Button variant="secondary" onClick={() => eliminarItem(producto.producto.id)}>Eliminar Producto</Button>
+        </Card.Body>
+      </Card>
     </div>
   )
 }

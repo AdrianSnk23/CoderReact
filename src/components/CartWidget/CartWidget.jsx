@@ -7,15 +7,13 @@ const CartWidget = () => {
 
   const {cantidadCarrito} = useContext(CartContext)
   let cantidad = cantidadCarrito()
-  console.log(cantidad)
 
   return (
     <>
-    <div className='centrar'>
-      <Link to={"/cart"}><img src="/public/assets/img/Carrito/carrito.png" alt="" className="carritoImg"/></Link>
-      <p className='m-0'>{cantidad === 0 ? null : cantidad}</p>
-    </div>
-    
+      <div className='centrar'>
+        <Link to={"/cart"}><img src="/public/assets/img/Carrito/carrito.png" alt="carro de compras" className="carritoImg"/></Link>
+        <p className='m-0 bg-danger'>{cantidad === 0 ? 0 : cantidad}</p>
+      </div>
     </>
   )
 }

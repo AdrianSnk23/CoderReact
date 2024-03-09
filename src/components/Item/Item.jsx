@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 const Item = ({producto}) => {
+
+
   return (
     <Link to={`/detalle/${producto.id}`}>
       <div className="column m-1">
